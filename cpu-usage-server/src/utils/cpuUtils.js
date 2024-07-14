@@ -7,7 +7,7 @@ const USAGE_BUFFER_LENGTH = parseInt(USAGE_MAX / USAGE_INTERVAL);
 
 const createUsage = (cpuUsage) => {
   const timestamp = Date.now();
-  const time = dayjs(timestamp).format("HH:mm:ss");
+  const time = dayjs(timestamp).format("mm:ss");
   return { timestamp, cpuUsage, time };
 };
 

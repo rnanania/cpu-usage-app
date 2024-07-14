@@ -46,7 +46,7 @@ To test your applciation, and spike up your CPU load, you can use the following 
 yes > /dev/null
 
 Run it multiple times to stress test each CPU core, if you like:
-yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null
+yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null
 
 When you're done, kill all the processes with this:
 

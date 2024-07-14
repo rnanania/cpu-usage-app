@@ -1,0 +1,14 @@
+import ModeToggle from './mode-toggle';
+
+const AppNavigation = () => {
+  return (
+    <div className="mx-auto w-full">
+      <div className="flex h-12 items-center justify-between">
+        <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">CPU Usage Monitor</h2>
+        <ModeToggle />
+      </div>
+    </div>
+  );
+};
+
+export default AppNavigation;
