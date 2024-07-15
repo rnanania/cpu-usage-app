@@ -12,11 +12,12 @@ CPU usage monitoring web app using NodeJS & React.
 - **`cpu-usage-client`**: Client code
 - **`cpu-usage-server`**: Server code
 
+## Prerequisite
+Please Ensure you have Node.js(>=20.12.1) and npm(>=10.5.0) installed on your 
+
 ## Server setup
 
 1. **Installation**
-
-   Ensure you have Node.js and npm installed on your machine.
 
    ```bash
    cd cpu-usage-server
@@ -36,8 +37,6 @@ CPU usage monitoring web app using NodeJS & React.
 ## Client setup
 
 1. **Installation**
-
-   Ensure you have Node.js and npm installed on your machine.
 
    ```bash
    cd cpu-usage-server
