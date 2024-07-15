@@ -1,4 +1,4 @@
-# CPU Usage Monitoring Application
+# CPU Usage Monitoring Application Server
 
 This application monitors CPU usage using Node.js with Express.js and `os-utils`. It captures CPU usage data at regular intervals and provides endpoints to fetch the current CPU usage and a series of historical CPU usage data.
 
