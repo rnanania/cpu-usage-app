@@ -31,9 +31,9 @@ const CpuUsageMonitor = () => {
     if (isError) {
       toast({
         variant: "destructive",
-        title: "Fetching CPU usage data failed",
+        title: "Fetching CPU usage data failed!!",
         duration: 10_000,
-        description: "Please contact our super hero engineering team.",
+        description: "Please contact our super heroes engineering team.",
       });
     }
   }, [isError, toast]);
@@ -43,8 +43,8 @@ const CpuUsageMonitor = () => {
     if (updateError) {
       toast({
         variant: "destructive",
-        title: "Updating CPU usage data failed",
-        description: "Please contact our super hero engineering team.",
+        title: "Updating CPU usage data failed!!",
+        description: "Please contact our super heroes engineering team.",
       });
     }
   }, [updateError, toast]);
