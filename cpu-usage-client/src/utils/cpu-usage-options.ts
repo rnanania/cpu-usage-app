@@ -1,6 +1,6 @@
 import { UsageMetric } from "@/services/cpu-usage";
 
-type LoadType = {
+export type LoadType = {
   id: number;
   name?: string;
   xAxis: string;
@@ -26,7 +26,7 @@ const getHotAreas = (data: UsageMetric[]) => {
     // Looking for the first heavy load index
     if (area.length == 0 && cpuUsage >= LOAD_THRESHOLD) {
       const { time } = data[index - 1] || data[index];
-      area.push({ name: "HOT", xAxis: time, id: index });
+      area.push({ name: "Under Load", xAxis: time, id: index });
     }
 
     // Previously heavy load found
@@ -71,7 +71,7 @@ const getCoolAreas = (data: UsageMetric[]) => {
     // Looking for the first heavy load index
     if (area.length == 0 && cpuUsage < LOAD_THRESHOLD) {
       const { time } = data[index - 1] || data[index];
-      area.push({ name: "COOL", xAxis: time, id: index });
+      area.push({ name: "Recovery", xAxis: time, id: index });
     }
 
     // Previously cool load found
@@ -100,7 +100,7 @@ const getCoolAreas = (data: UsageMetric[]) => {
         coolAreas.push(area);
       }
     }
-  }  
+  }
   return coolAreas;
 };
 
@@ -145,13 +145,27 @@ const getVisualMap = (data: UsageMetric[]) => {
   return visualMaps;
 };
 
+// NOTE: All above functions can be combined into one function with better performance.
+
 export const getCpuUsageChartOptions = (data: UsageMetric[]) => {
+  const xAxisData = data.map((item) => item.time);
   const visualMaps = getVisualMap(data);
   const hotAreas = getHotAreas(data);
   const coolAreas = getCoolAreas(data);
-  console.info(visualMaps);
+  const currentUsage = data[data.length - 1].cpuUsage;
 
-  return {
+  const option = {
+    grid: {
+      left: '30px',
+      right: '0px',
+      containLabel: true
+    },
+    title: {
+      text: `CPU Usage - ${currentUsage}`,
+      textStyle: {
+        fontSize: 14,
+      }
+    },
     tooltip: {
       trigger: "axis",
       axisPointer: {
@@ -167,7 +181,7 @@ export const getCpuUsageChartOptions = (data: UsageMetric[]) => {
     xAxis: {
       type: "category",
       boundaryGap: false,
-      data: data.map((item) => item.time),
+      data: [...xAxisData],
     },
     yAxis: {
       type: "value",
@@ -187,12 +201,33 @@ export const getCpuUsageChartOptions = (data: UsageMetric[]) => {
         smooth: true,
         data: data.map((item) => item.cpuUsage),
         markArea: {
+          label: {
+            color: "rgb(240, 100, 24, 0.8)",
+            fontWeight: 'bolder',
+            fontSize: '12px',
+          },
           itemStyle: {
             color: "rgba(76, 88, 151, 0.4)",
+            borderWidth: 2,
+            borderColor: "rgb(240, 100, 24, 0.8)",
+            borderType: [8, 8],
+            borderDashOffset: 2
           },
           data: [...hotAreas, ...coolAreas],
         },
       },
     ],
   };
+
+  return { option, hotAreas, coolAreas };
+};
+
+const MAX_BUFFER = 60; // 10 minutes worth of max data to display on screen
+export const updateSeries = (series: UsageMetric[], newData: UsageMetric) => {
+  const seriesLastTimestamp = series[series.length - 1].timestamp;
+  const chartData =
+    newData && seriesLastTimestamp < newData.timestamp
+      ? [...series, newData]
+      : [...series];
+  return chartData.slice(-1 * MAX_BUFFER);
 };
