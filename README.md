@@ -50,23 +50,30 @@ CPU usage monitoring web app using NodeJS & React.
 
 ## Screenshots
 
+### Inital Load
 ![Initial App load Light Mode](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/Initial-Light-Mode.png)
 
-
+### Inital Load dark mode
 ![Initial App load Dark Mode](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/Initial-Dark-Mode.png)
 
+### CPU usage history fetch error handling
 ![CPU Usage data series fetch error handling](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/Error-Handling-Fetch.png)
 
+### CPU usage update fetch error handling
 ![CPU Usage data update error handling](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/Error-Handling-Update.png)
 
+### CPU usage random high/low usage
 ![CPU Usage Hig/Low Light Mode](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/CPU-Usage-High-Low.png)
 
+### CPU usage random high/low usage dark mode
 ![CPU Usage Hig/Low Dark Mode](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/CPU-Usage-Higg-Low-Dark.png)
 
+### CPU usage under load alert
 ![CPU Usage under load alert](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/Under-Load-Recovery-1.png)
 
+### CPU usage recovery & under load alert
 ![CPU Usage under load & recovery alert](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/Under-Load-Recovery-2.png)
 
+### Mobile screen look and feel
 ![Mobile screen](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/Mobile-Screen.png)
-
 
