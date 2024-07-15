@@ -55,6 +55,6 @@ export const useCpuUsageMutation = () => {
     },
     onError: () => {
       throw Error("Unable to fetch cpu upate");
-    }
+    },
   });
 };

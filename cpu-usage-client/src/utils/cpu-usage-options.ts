@@ -156,15 +156,15 @@ export const getCpuUsageChartOptions = (data: UsageMetric[]) => {
 
   const option = {
     grid: {
-      left: '30px',
-      right: '0px',
-      containLabel: true
+      left: "30px",
+      right: "0px",
+      containLabel: true,
     },
     title: {
       text: `CPU Usage - ${currentUsage}`,
       textStyle: {
         fontSize: 14,
-      }
+      },
     },
     tooltip: {
       trigger: "axis",
@@ -203,15 +203,15 @@ export const getCpuUsageChartOptions = (data: UsageMetric[]) => {
         markArea: {
           label: {
             color: "rgb(240, 100, 24, 0.8)",
-            fontWeight: 'bolder',
-            fontSize: '12px',
+            fontWeight: "bolder",
+            fontSize: "12px",
           },
           itemStyle: {
             color: "rgba(76, 88, 151, 0.4)",
             borderWidth: 2,
             borderColor: "rgb(240, 100, 24, 0.8)",
             borderType: [8, 8],
-            borderDashOffset: 2
+            borderDashOffset: 2,
           },
           data: [...hotAreas, ...coolAreas],
         },

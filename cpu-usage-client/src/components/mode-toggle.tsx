@@ -1,16 +1,16 @@
 // Copied from shadcn documentation
-import { Moon, Sun } from "lucide-react"
-import { Button } from "@/shadcn/components/ui/button"
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/shadcn/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/shadcn/components/ui/dropdown-menu"
-import { useTheme } from "@/components/theme-provider"
+} from "@/shadcn/components/ui/dropdown-menu";
+import { useTheme } from "@/components/theme-provider";
 
 const ModeToggle = () => {
-  const { setTheme } = useTheme()
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -33,7 +33,7 @@ const ModeToggle = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
-}
+  );
+};
 
 export default ModeToggle;

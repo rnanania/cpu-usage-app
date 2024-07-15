@@ -28,7 +28,13 @@ const CpuUsageAlerts = ({ hotAreas, coolAreas }: CpuUsageAlertsProps) => {
         {alerts.map(([start, end]) => (
           <TableRow key={`${start.id}-${end.id}`}>
             <TableCell>
-              <Badge variant={start.name === 'Under Load' ? 'destructive' : 'secondary'}>{start.name}</Badge>
+              <Badge
+                variant={
+                  start.name === "Under Load" ? "destructive" : "secondary"
+                }
+              >
+                {start.name}
+              </Badge>
             </TableCell>
             <TableCell>
               <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">

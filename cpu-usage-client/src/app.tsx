@@ -1,12 +1,15 @@
-import AppNavigation from '@/components/app-navigation'
-import CpuUsageMonitor from './components/cpu-usage-monitor'
-import { Toaster } from "@/shadcn/components/ui/toaster"
+import AppNavigation from "@/components/app-navigation";
+import CpuUsageMonitor from "./components/cpu-usage-monitor";
+import { Toaster } from "@/shadcn/components/ui/toaster";
 
-const App = ()  => {
+const App = () => {
   return (
     <div className="flex flex-col h-full">
       <div className="flex flex-col h-full px-4">
-        <div className="border-b-2 z-100" style={{ backgroundColor: "hsl(var(--background))" }}>
+        <div
+          className="border-b-2 z-100"
+          style={{ backgroundColor: "hsl(var(--background))" }}
+        >
           <AppNavigation />
         </div>
         <main className="flex-1">
@@ -18,9 +21,7 @@ const App = ()  => {
         </main>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
-
-
+export default App;

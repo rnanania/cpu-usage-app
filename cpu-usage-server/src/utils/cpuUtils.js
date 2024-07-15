@@ -16,7 +16,14 @@ const createUsage = (cpuUsage) => {
 const buildSeries = (series, current) => {
   const lastItem = series.length ? series[series.length - 1] : {};
   const returnLastToo = current && lastItem.timestamp !== current.timestamp;
-  return returnLastToo ? [...series, { ...current }].slice(-1 * USAGE_BUFFER_LENGTH) : [...series];
+  return returnLastToo
+    ? [...series, { ...current }].slice(-1 * USAGE_BUFFER_LENGTH)
+    : [...series];
 };
 
-module.exports = { createUsage, buildSeries, USAGE_INTERVAL, USAGE_BUFFER_LENGTH };
+module.exports = {
+  createUsage,
+  buildSeries,
+  USAGE_INTERVAL,
+  USAGE_BUFFER_LENGTH,
+};

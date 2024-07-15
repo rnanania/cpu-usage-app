@@ -1,6 +1,11 @@
 // NOTE: Using os-utils instead of os from node so we dont have to deal with os.loadavg() and os.cpus().
 const osUtils = require("os-utils");
-const { createUsage, buildSeries, USAGE_INTERVAL, USAGE_BUFFER_LENGTH } = require("../utils/cpuUtils");
+const {
+  createUsage,
+  buildSeries,
+  USAGE_INTERVAL,
+  USAGE_BUFFER_LENGTH,
+} = require("../utils/cpuUtils");
 
 // NOTE: This can be moved to DB to persist.
 let usageBuffer = [];
