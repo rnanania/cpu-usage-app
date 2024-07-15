@@ -29,7 +29,10 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+
+    // Not sure if we need to keep this here
+    "types": ["vitest/globals"]
   },
   "include": ["src"]
 }

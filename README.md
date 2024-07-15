@@ -2,10 +2,10 @@
 CPU usage monitoring web app using NodeJS & React.
 
 ## Further Improvements
-- I have NOTE across the app which can be improved by investing more time into this app.
-- I would like to add End to End Cypress test to have an automation around testing.
 - Performance improvemnt
-- Think about scalability and show more data on UI.
+- Further work around scalability to show more data points on UI.
+- Testing - Heart of this app is in this file `cpu-usage-client/src/utils/cpu-usage-options.ts` so I have just tested this file only using chatgpt & Jest. More RTL and Cypress test can be added to improve further in this area.
+- I have added NOTE across the app which can be improved by investing more time into this app.
 
 ## Structure
 
