@@ -16,7 +16,7 @@ const LOAD_THRESHOLD = 1;
 const MIN_LOAD_COUNT = 12; // Each load is for 10 seconds so 12 loads needed to see the heavy load for 2 minutes.
 
 // Traverse through data and find the cool area for cpu load data
-const getHotAreas = (data: UsageMetric[]) => {
+export const getHotAreas = (data: UsageMetric[]) => {
   const hotAreas: LoadType[][] = [];
   let area: LoadType[] = [];
 
@@ -61,7 +61,7 @@ const getHotAreas = (data: UsageMetric[]) => {
 };
 
 // Traverse through data and find the cool area for cpu load data
-const getCoolAreas = (data: UsageMetric[]) => {
+export const getCoolAreas = (data: UsageMetric[]) => {
   const coolAreas: LoadType[][] = [];
   let area: LoadType[] = [];
 
@@ -105,7 +105,7 @@ const getCoolAreas = (data: UsageMetric[]) => {
 };
 
 // Traverse through data and highlight the each group of Hot or Cold load with specific color.
-const getVisualMap = (data: UsageMetric[]) => {
+export const getVisualMap = (data: UsageMetric[]) => {
   const visualMaps: VisualMapType[] = [];
   const lastLoad = data[0].cpuUsage;
   let lastVisualId = 0;
