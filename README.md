@@ -55,10 +55,10 @@ Please Ensure you have Node.js(>=20.12.1) and npm(>=10.5.0) installed on your
 
 ## Screenshots
 
-### Inital Load
+### Initial Load
 ![Initial App load Light Mode](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/Initial-Light-Mode.png)
 
-### Inital Load dark mode
+### Initial Load dark mode
 ![Initial App load Dark Mode](https://github.com/rnanania/cpu-usage-app/blob/main/screenshots/Initial-Dark-Mode.png)
 
 ### CPU usage history fetch error handling
